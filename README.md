@@ -22,7 +22,7 @@ It is important that the container is run with the argument --net=host and that 
 A docker-compose.yml file could look like the one below. 
 ```
     wsdd:
-        image: "jonasped/wsdd"
+        image: "TODO"
         environment:
             - HOSTNAME=NETBIOS_NAME
         restart: unless-stopped

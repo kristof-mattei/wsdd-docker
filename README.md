@@ -1,5 +1,5 @@
 # wsdd-docker
-Docker image for wsdd.py. 
+Docker image for [wsdd.py](https://github.com/christgau/wsdd/)
 
 wsdd implements a Web Service Discovery host daemon. This enables (Samba) hosts, like your local NAS device or Linux server, to be found by Web Service Discovery Clients like Windows.
 

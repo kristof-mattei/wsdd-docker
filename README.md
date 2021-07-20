@@ -13,7 +13,7 @@ DOMAIN: Report being a member of an AD DOMAIN. Disables WORKGROUP if set.
 ## Running container
 ### From command line
 ```
-docker run --net=host -e HOSTNAME=$(hostname) Kristof-Mattei/wsdd-docker
+docker run --net=host -e HOSTNAME=$(hostname) ghcr.io/kristof-mattei/wsdd-docker:main
 ```
 
 It is important that the container is run with the argument --net=host and that the environment variable HOSTNAME is set to the same value as your Samba netbios name. Samba netbios name defaults to the hostname. 
@@ -22,7 +22,7 @@ It is important that the container is run with the argument --net=host and that 
 A docker-compose.yml file could look like the one below. 
 ```
     wsdd:
-        image: "Kristof-Mattei/wsdd-docker"
+        image: "ghcr.io/kristof-mattei/wsdd-docker:main"
         environment:
             - HOSTNAME=NETBIOS_NAME
         restart: unless-stopped

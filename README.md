@@ -14,7 +14,7 @@ wsdd implements a Web Service Discovery host daemon. This enables (Samba) hosts,
 ## Running container
 ### From command line
 ```
-docker run --net=host -e HOSTNAME=$(HOSTNAME) ghcr.io/kristof-mattei/wsdd-docker:main
+docker run --net=host -e HOSTNAME=$(HOSTNAME) ghcr.io/kristof-mattei/wsdd-docker:latest
 ```
 
 It is important that the container is run with the argument `--net=host` and that the environment variable `HOSTNAME` is set to the same value as your Samba netbios name. Samba netbios name defaults to the hostname. 
@@ -23,7 +23,7 @@ It is important that the container is run with the argument `--net=host` and tha
 A `docker-compose.yml` file could look like the one below. 
 ```
     wsdd:
-        image: "ghcr.io/kristof-mattei/wsdd-docker:main"
+        image: "ghcr.io/kristof-mattei/wsdd-docker:latest"
         environment:
             - HOSTNAME=MY_HOSTNAME
             - WORKGROUP=MY_WORKGROUP

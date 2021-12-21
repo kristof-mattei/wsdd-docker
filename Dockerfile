@@ -2,7 +2,7 @@ FROM python:3.11.0a3-alpine3.15@sha256:600f46a53e2563a1bf94b882edfbf5312daed59aa
 
 WORKDIR /usr/src/app
 
-ADD https://raw.githubusercontent.com/christgau/wsdd/v0.6.4/src/wsdd.py ./wsdd.py
+ADD https://raw.githubusercontent.com/christgau/wsdd/v0.7.0/src/wsdd.py ./wsdd.py
 
 COPY ./init.sh .
 

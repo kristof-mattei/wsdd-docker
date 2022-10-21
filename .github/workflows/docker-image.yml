@@ -48,7 +48,7 @@ jobs:
       # https://github.com/docker/metadata-action
       - name: Extract Docker metadata
         id: meta
-        uses: docker/metadata-action@9be43f076db7f0f4ac30d81183fc9d956b9e9eb6 # tag=v1
+        uses: docker/metadata-action@9be43f076db7f0f4ac30d81183fc9d956b9e9eb6 # tag=v1.12.0
         with:
           tags: |
             type=raw,value=latest

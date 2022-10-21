@@ -3,5 +3,6 @@
     "extends": [
           "github>kristof-mattei/renovate-config",
           "local>kristof-mattei/renovate-config"
-    ]
+    ],
+    "includeForks": true
 }

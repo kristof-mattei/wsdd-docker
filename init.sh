@@ -3,10 +3,10 @@
 args=
 
 if [ ! -z "${WSDD_ARGS}" ]; then
-	args=${WSDD_ARGS}
+	args="${WSDD_ARGS}"
 else
 	if [ ! -z "${HOSTNAME}" ]; then
-		args="${args} ${HOSTNAME}"
+		args="-n ${HOSTNAME}"
 	else
 		echo "HOSTNAME environment variable must be set."
 		exit 1

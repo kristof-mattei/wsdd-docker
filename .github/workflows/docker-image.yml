@@ -11,7 +11,7 @@ on:
   push:
     branches: [ main ]
     # Publish semver tags as releases.
-    tags: [ 'v*.*.*' ]
+    tags: [ "v*.*.*" ]
   pull_request:
     branches: [ main ]
 
@@ -21,10 +21,8 @@ env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -33,6 +31,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
+        with:
+          submodules: true
 
       # Login against a Docker registry except on PR
       # https://github.com/docker/login-action
